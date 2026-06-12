@@ -62,12 +62,12 @@ Ensure when title is clicked page displays:
 - Title
 - Icon
 - Name
-- + Follow Button
+- Follow Button
 - Favourite article button
 - Article text
 - Icon
 - Name
-- + Follow Button
+- Follow Button
 - Favourite article button
 
 **Sign In Page** 
@@ -79,6 +79,7 @@ Ensure we display:
 - Home button
 - Sign in button
 - Sign up button
+
 Ensure text 'Sign in' displays
 Ensure 'Need an account?' displays
 Ensure 'Need an account?' is hyperlinked and visible
@@ -98,6 +99,7 @@ Ensure we display:
 - Home button
 - Sign in button
 - Sign up button
+
 Ensure 'Sign up' text displays
 Ensure 'Need an account?' is hyperlinked and visible
 Ensure Username field displays
