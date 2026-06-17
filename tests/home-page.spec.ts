@@ -12,8 +12,8 @@ test('Verify that all expected elements are visible on the home page', async ({p
     await expect(navigation.signInButton).toBeVisible();
     await expect(navigation.signUpButton).toBeVisible();
     await expect(navigation.globalFeed).toBeVisible();
-    await expect(navigation.articleName).toBeVisible();
-    await expect(navigation.articleUserIcon).toBeVisible();
+    await expect(navigation.articleUsername).toBeVisible();
+    await expect(navigation.homeBannerText).toBeVisible();
     await expect(navigation.articleDate).toBeVisible();
     await expect(navigation.articleFavouriteIcon).toBeVisible();    
     await expect(navigation.yourFeed).toBeVisible();
@@ -25,3 +25,28 @@ test('Verify that all expected elements are visible on the home page', async ({p
     await expect(navigation.bannerLink).toBeVisible();
 });
 
+test('Verify that all the expected elements are visible on the article page', async ({page}) => {
+    const navigation = new Navigation(page);
+        await (navigation.articlePreview).click();
+        await expect(page).toHaveURL(/article\//);
+        await expect(navigation.conduitIcon).toBeVisible();
+        await expect(navigation.homeButton).toBeVisible();
+        await expect(navigation.signInButton).toBeVisible();
+        await expect(navigation.signUpButton).toBeVisible();
+        await expect(navigation.articleBanner).toBeVisible();
+        await expect(navigation.articleUsername).toBeVisible();
+        await expect(navigation.articleDate).toBeVisible();
+        await expect(navigation.articleFavouriteIcon).toBeVisible();
+        await expect(navigation.articleFollowButton).toBeVisible();
+});
+
+
+test('Verify that all the expected elements are visible on the sign in page', async ({page}) => {
+    const navigation = new Navigation(page);
+    await (navigation.signInButton).click();
+    await expect(page).toHaveURL(/login/);
+    await expect(navigation.conduitIcon).toBeVisible();
+    await expect(navigation.homeButton).toBeVisible();
+    await expect(navigation.signInButton).toBeVisible();
+    await expect(navigation.signUpButton).toBeVisible();
+});
