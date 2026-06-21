@@ -68,35 +68,11 @@ test('Verify that all the expected elements are visible on the sign up page', as
     await expect(navigation.signInNav).toBeVisible();
     await expect(navigation.signUpNav).toBeVisible();
     await expect(navigation.signUpText).toBeVisible();
+    await expect(navigation.haveAnAccountLink).toBeVisible();
+    await expect(navigation.signInEmailField).toBeVisible();
+    await expect(navigation.signInPasswordField).toBeVisible();
+    await expect(navigation.signUpUsernameField).toBeVisible();
+    await expect(navigation.signUpButton).toBeVisible();
 });
 
-
-
-
-/*
-Sign Up
-Go to https://conduit.bondaracademy.com/
-Click sign up button
-Ensure URL is https://conduit.bondaracademy.com/
-Ensure we display:
-Conduit icon
-Home button
-Sign in button
-Sign up button
-Ensure 'Sign up' text displays
-Ensure 'Need an account?' is hyperlinked and visible
-Ensure Username field displays
-Ensure Email field displays
-Ensure Password field displays
-Ensure Sign up button displays
-Ensure Sign up button cannot be clicked whilst fields are empty
-
-
-To effectively catch bugs throughout your entire frontend, you need to combine them into a cohesive testing strategy.
-
-Logic: Is the underlying application logic correct (e.g.: logic for adding items to a cart or calculating tax based on the user’s location)?
-Visual: Does the UI render correctly in different app states and variations?
-Functional: Does the component respond to user interactions and update accordingly?
-Accessibility: Does the UI adapt to the user’s needs (i.e.: screen readers & keyboard-only navigation)?
-User flows: Can users complete core functionalities across multiple pages? */
 
