@@ -32,6 +32,9 @@ readonly signInButton: Locator;
 //Sign Up Page
 readonly signUpButton: Locator;
 readonly signUpText: Locator;
+readonly haveAnAccountLink: Locator;
+readonly signUpUsernameField: Locator;
+readonly signUpButton: Locator;
 
 constructor(page:Page) {
 this.page = page;
@@ -67,39 +70,8 @@ this.signInButton = page.getByRole('button', { name: 'Sign in' })
 //Sign Up Page
 this.signUpButton = page.getByRole('button', { name: 'Sign up' })
 this.signUpText = page.getByRole('heading', { name: 'Sign up' });
+this.haveAnAccountLink = page.getByRole('link', { name: 'Have an account?' });
+this.signUpUsernameField = page.getByPlaceholder('Username');
+this.signUpButton = page.getByRole('button', { name: 'Sign up' })
 };
 }; 
-
-
-
-
-/*
-
-https://docs.github.com/en/actions/get-started/quickstart
-
-//build CI/CD pipeline for the Conduit application using GitHub Actions. The pipeline should include the following steps:
-1. Checkout the code from the repository.
-2. Install dependencies using npm install.
-3. Run tests using npm test.
-4. Generate a test report and upload it as an artifact.
-5. Deploy the application to a staging environment if all tests pass.
-
-Sign Up
-Go to https://conduit.bondaracademy.com/
-Click sign up button
-Ensure URL is https://conduit.bondaracademy.com/
-Ensure we display:
-Conduit icon
-Home button
-Sign in button
-Sign up button
-Ensure 'Sign up' text displays
-Ensure 'Need an account?' is hyperlinked and visible
-Ensure Username field displays
-Ensure Email field displays
-Ensure Password field displays
-Ensure Sign up button displays
-Ensure Sign up button cannot be clicked whilst fields are empty*/
-
-//Learn to scrape values from the page and use them in your tests. 
-//For example, you can scrape the article name and date, and then use them to verify that the article is displayed correctly in the feed.
